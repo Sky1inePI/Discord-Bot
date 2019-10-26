@@ -13,5 +13,10 @@ namespace Gachimuchenik.Modules
         public async Task Ping() {
             await Context.Channel.SendMessageAsync($"{Context.User.Mention} ♂ YES SIR ♂");
         }
+
+        [Command("created")]
+        public async Task CreatedAt() {
+            await Context.Channel.SendMessageAsync($"{Context.User.CreatedAt}");
+        }
     }
 }
